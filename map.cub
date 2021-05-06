@@ -1,11 +1,11 @@
-R 2000 2000
-NO ./textures/default_furnace_side.xpm
+R 1300 1300
+NO ./textures/grass.xpm
 SO ./textures/default_furnace_side.xpm
 WE ./textures/default_furnace_top.xpm
 EA ./textures/default_furnace_top.xpm
 S ./textures/boo.xpm
 S2 ./textures/heart.xpm
-C ./textures/night.xpm
+C ./textures/sky.xpm
 F ./textures/desert.xpm
 
 111111111111111111111111111111
