@@ -19,12 +19,14 @@ Installer les librairies nécessaires pour faire tourner la MinilibX :
 ```
 sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev
 ```
-Compiler et lancer le programme :
+Télécharger le repo :
 ```
 git clone https://github.com/sarahlesc/cub3D.git
 cd cub3d
-make
-./cub3D map.cub
+```
+Compiler et lancer le programme :
+```
+make && ./cub3D map.cub
 ```
 
 ## Touches
