@@ -6,7 +6,7 @@
 /*   By: slescure <slescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 18:31:37 by slescure          #+#    #+#             */
-/*   Updated: 2021/05/03 18:42:00 by slescure         ###   ########.fr       */
+/*   Updated: 2021/09/29 18:22:09 by slescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,9 +110,6 @@ int		health_management(t_data *data)
 	else if (data->bonus.life == 1)
 		draw_life_bar(data, data->bonus.life - 1);
 	else if (data->bonus.life == 0)
-	{
-		printf("Game over\n");
 		return (-1);
-	}
 	return (0);
 }

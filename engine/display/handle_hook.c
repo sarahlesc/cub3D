@@ -6,7 +6,7 @@
 /*   By: slescure <slescure@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 18:20:34 by slescure          #+#    #+#             */
-/*   Updated: 2021/05/03 18:43:53 by slescure         ###   ########.fr       */
+/*   Updated: 2021/09/29 17:33:51 by slescure         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ int		move_perso(t_data *data)
 	if (data->param.map.tab_map[x][y] == '2')
 		data->bonus.life -= 1;
 	if (data->param.map.tab_map[x][y] == '3')
-		if (data->bonus.life < 4)
-			data->bonus.life += 1;
+	{
+		printf("YOU ESCAPED!\n");
+		close_game(data);
+		return (-1);
+	}
 	if ((check_for_lonely_walls(data->param.map, x, y) == 0) &&
 		(data->param.map.tab_map[x][y] == '0' ||
 		data->param.map.tab_map[x][y] == data->param.perso.orientation))
@@ -50,6 +53,7 @@ int		launch_hook(t_data *data)
 	raycasting(data, &data->ray);
 	if (health_management(data) == -1)
 	{
+		printf("GAME OVER!\n");
 		close_game(data);
 		return (-1);
 	}
